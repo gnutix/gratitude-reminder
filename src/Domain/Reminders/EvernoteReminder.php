@@ -1,6 +1,6 @@
 <?php
 
-namespace Gnutix\Gratitude\Reminders;
+namespace Gnutix\Gratitude\Domain\Reminders;
 
 use Gnutix\Gratitude\Mailer\MailerInterface;
 use Gnutix\Gratitude\Mailer\Message;

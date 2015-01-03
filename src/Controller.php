@@ -2,8 +2,7 @@
 
 namespace Gnutix\Gratitude;
 
-use Gnutix\Gratitude\Mailer\SwiftMailer;
-use Gnutix\Gratitude\Reminders\EvernoteReminder;
+use Gnutix\Gratitude\Domain\Reminders\EvernoteReminder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
