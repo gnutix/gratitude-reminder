@@ -1,6 +1,7 @@
 {
   "addons": [
-    "codacy"
+    "codacy",
+    "newrelic"
   ],
   "env": {
     "SYMFONY_DEBUG": "0"
