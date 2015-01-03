@@ -50,11 +50,14 @@ final class Controller
             $this->container->getParameter('developer_email')
         );
 
+        $reminderSentSuccessfully = $reminder->remind();
+
         return new Response(
             $this->getTemplatingEngine()->render(
                 'reminder.html.twig',
-                array('reminderSentSuccessfully' => $reminder->remind())
-            )
+                array('reminderSentSuccessfully' => $reminderSentSuccessfully)
+            ),
+            $reminderSentSuccessfully ? 200 : 502
         );
     }
 
