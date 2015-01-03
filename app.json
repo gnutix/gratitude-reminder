@@ -1,0 +1,8 @@
+{
+  "addons": [
+    "codacy"
+  ],
+  "env": {
+    "SYMFONY_DEBUG": "0"
+  }
+}

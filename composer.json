@@ -1,0 +1,16 @@
+{
+    "name": "gnutix/gratitude",
+    "description": "Application to reinforce your gratitude attitude.",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": { "Gnutix\\Gratitude\\": "src/" }
+    },
+    "require": {
+        "php": ">=5.5",
+        "symfony/http-kernel": "~2.6",
+        "symfony/dependency-injection": "~2.6",
+        "swiftmailer/swiftmailer": "~5.3",
+        "twig/twig": "~1.16"
+    },
+    "minimum-stability": "stable"
+}
