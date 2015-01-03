@@ -12,5 +12,8 @@
         "swiftmailer/swiftmailer": "~5.3",
         "twig/twig": "~1.16"
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "bin-dir": "bin/"
+    }
 }
