@@ -25,11 +25,9 @@ final class Controller
     }
 
     /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function defaultAction(Request $request)
+    public function defaultAction()
     {
         return new Response($this->getTemplatingEngine()->render('default.html.twig'));
     }

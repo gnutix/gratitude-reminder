@@ -57,6 +57,10 @@ final class Kernel implements HttpKernelInterface
      */
     public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true)
     {
+        if ($type !== static::MASTER_REQUEST) {
+            return new Response('Invalid request type', 500);
+        }
+
         $this->configureContainer($request);
 
         $this->controller = new Controller($this->container);

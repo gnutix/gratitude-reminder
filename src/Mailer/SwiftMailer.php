@@ -41,6 +41,6 @@ final class SwiftMailer implements MailerInterface
         $swiftMessage->setFrom($sender);
         $swiftMessage->setTo($recipients);
 
-        return $this->mailer->send($swiftMessage, $failures);
+        return $this->mailer->send($swiftMessage);
     }
 }
