@@ -17,6 +17,7 @@ final class Kernel implements HttpKernelInterface
 {
     const DEVELOPER_NAME = 'Dorian Villet';
     const DEVELOPER_EMAIL = 'gnutix@gmail.com';
+    const NON_GMAIL_DEVELOPER_EMAIL = 'nawak@gnutix.net';
     const EVERNOTE_EMAIL = 'gnutix.7e4c3e3@m.evernote.com';
 
     /** @var string */
@@ -93,7 +94,11 @@ final class Kernel implements HttpKernelInterface
     {
         $this->container = new Container();
         $this->container->setParameter('developer_email', array(static::DEVELOPER_EMAIL => static::DEVELOPER_NAME));
-        $this->container->setParameter('evernote_email', static::EVERNOTE_EMAIL);
+        $this->container->setParameter(
+            'non_gmail_developer_email',
+            array(static::NON_GMAIL_DEVELOPER_EMAIL => static::DEVELOPER_NAME)
+        );
+        $this->container->setParameter('evernote_email', array(static::EVERNOTE_EMAIL => 'Evernote account'));
         $this->container->setParameter('smtp_host', 'smtp.mandrillapp.com');
         $this->container->setParameter('smtp_port', 587);
         $this->container->setParameter('smtp_username', static::DEVELOPER_EMAIL);

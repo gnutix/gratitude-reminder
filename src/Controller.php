@@ -46,6 +46,7 @@ final class Controller
             $this->getTemplatingEngine(),
             $this->getMailer(),
             $this->container->getParameter('evernote_email'),
+            $this->container->getParameter('non_gmail_developer_email'),
             $this->container->getParameter('developer_email')
         );
 

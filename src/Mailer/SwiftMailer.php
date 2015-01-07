@@ -35,11 +35,12 @@ final class SwiftMailer implements MailerInterface
     /**
      * {@inheritDoc}
      */
-    public function send($sender, $subject, $content, $recipients)
+    public function send($sender, $subject, $content, $recipients, $replyTo = '')
     {
         $swiftMessage = new \Swift_Message($subject, $content, 'text/html', 'UTF-8');
         $swiftMessage->setFrom($sender);
         $swiftMessage->setTo($recipients);
+        $swiftMessage->setReplyTo($replyTo);
 
         return $this->mailer->send($swiftMessage);
     }

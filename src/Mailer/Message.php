@@ -16,21 +16,26 @@ final class Message
     /** @var string */
     private $content;
 
-    /** @var string|array */
+    /** @var string|string[] */
     private $recipients;
 
+    /** @var string|string[] */
+    private $replyTo;
+
     /**
-     * @param string       $sender
-     * @param string       $subject
-     * @param string       $content
-     * @param string|array $recipients
+     * @param string          $sender
+     * @param string          $subject
+     * @param string          $content
+     * @param string|string[] $recipients
+     * @param string|string[] $replyTo
      */
-    public function __construct($sender, $subject, $content, $recipients)
+    public function __construct($sender, $subject, $content, $recipients, $replyTo = '')
     {
         $this->sender = $sender;
         $this->subject = $subject;
         $this->content = $content;
         $this->recipients = $recipients;
+        $this->replyTo = $replyTo;
     }
 
     /**
@@ -40,6 +45,6 @@ final class Message
      */
     public function send(MailerInterface $mailer)
     {
-        return $mailer->send($this->sender, $this->subject, $this->content, $this->recipients);
+        return $mailer->send($this->sender, $this->subject, $this->content, $this->recipients, $this->replyTo);
     }
 }
