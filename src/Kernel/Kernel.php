@@ -17,7 +17,7 @@ final class Kernel implements HttpKernelInterface
 {
     const DEVELOPER_NAME = 'Dorian Villet';
     const DEVELOPER_EMAIL = 'gnutix@gmail.com';
-    const NON_GMAIL_DEVELOPER_EMAIL = 'nawak@gnutix.net';
+    const NON_GMAIL_DEVELOPER_EMAIL = 'gnutix@hotmail.com';
     const EVERNOTE_EMAIL = 'gnutix.7e4c3e3@m.evernote.com';
 
     /** @var string */
