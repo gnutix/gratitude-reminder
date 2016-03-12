@@ -1,0 +1,23 @@
+---
+# Name of your project, will also be the vagrant box name
+project_name: "gratitude"
+
+# Main hostname through which the vagrant box will be accessible
+hostname: "gratitude.lo"
+# Alternative hostnames through which you want to access the vagrant box
+hostnames: []
+
+# The box IP, this must be unique across all your virtualized projects to
+# avoid collisions. WARNING, this parameter will not guarantee that your box
+# will be accessible at this IP depending on your network configuration or
+# provider choice.
+box_ip: "10.10.10.85"
+
+# Root directory of your project for the webserver and other purposes
+project_directory: "/vagrant/"
+root_directory: "/vagrant/web/"
+
+# For a PHP project, you might want to set the following
+# Default reporting level of PHP errors
+php_error_reporting: "E_ALL & ~E_NOTICE"
+php_version: "7.0"
